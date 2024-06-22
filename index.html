@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do list</title>
+    <!-- Font libraries -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sorts+Mill+Goudy:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font awesone -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css"
+      rel="stylesheet"
+    />
+    <!-- External styling -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="todo">
+        <h1>To-Do List</h1>
+        <form id="add_task">
+          <!-- &#128394;&#65039: for pencil -->
+          <input
+            type="text"
+            id="task"
+            name="tasktodo"
+            placeholder="&#128394;&#65039; Add task"
+          />
+          <!-- Aside of the input there is a button with a plus symbol -->
+          <button class="add_btn"><i class="fas fa-plus"></i></button>
+        </form>
+        <!-- For to-do list we have a unordered list wit items -->
+        <div class="todo_list">
+          <h2>Task list</h2>
+          <!-- That is an example of what is wanted in the task list container -->
+          <ul class="todo_list--container">
+            <!-- <div class="todo_list--group">
+              <li class="unchecked"><span>organise room</span></li>
+              <button class="remove_btn">&#128473;</button>
+            </div>
+            <div class="todo_list--group">
+              <li class="unchecked">organise bathroom</li>
+              <button class="remove_btn">&#128473;</button>
+            </div> -->
+          </ul>
+        </div>
+        <!-- Footer part: it includes Includes how many tasks are done of the total tasks in the list -->
+        <div id="footer">
+          <h3 class="count">
+            <p id="checked_tasks">0</p>
+            out of
+            <p id="all_tasks">0</p>
+            of tasks completed
+          </h3>
+        </div>
+      </section>
+    </main>
+    <!-- External JS -->
+    <script src="./script.js"></script>
+  </body>
+</html>
