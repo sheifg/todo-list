@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  background-color: white;
+  background-image: url("./images/pexels-karolina-grabowska-4210787.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  color: black;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+/* To-do section */
+.todo {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: 90vh;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* Styling the form */
+#add_task {
+  width: 75%;
+  margin-top: 1rem;
+  /* To put close to the input, it is necessary to use display flex and it takes automatically the height of the input */
+  display: flex;
+}
+
+#task {
+  height: 3.5rem;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  border: none;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+}
+
+.todo_list {
+  width: 70vw;
+  padding: 0 10px;
+  text-align: left;
+  margin: auto;
+  border: 5px solid rgb(234, 162, 186);
+  color: rgb(0, 0, 0);
+  background-color: white;
+  box-shadow: 5px 10px #b1a6ac98;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+h2 {
+  text-align: center;
+  padding: 1rem;
+}
+
+ul li {
+  list-style-type: none;
+  font-size: 1.2rem;
+  /* It will create a square check with before pseudoclass and it is necessary to ensure that, everything is in the middle, for that reason it is necessary to include display flex and align items center */
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+/* Styling the list group*/
+.todo_list--group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Creating am empty squeare before the element itself using pseudo class before */
+li.unchecked::before {
+  content: "\2610";
+  font-size: 2rem;
+  margin-right: 1.2rem;
+}
+
+li.checked::before {
+  content: "\2714";
+  font-size: 1.5rem;
+  color: green;
+}
+
+li.checked span {
+  text-decoration: line-through;
+}
+
+.remove_btn,
+.add_btn {
+  background-color: rgb(234, 162, 186);
+  border: none;
+  font-size: 1.12rem;
+  color: white;
+  padding: 0.3rem 0.4rem;
+  width: 3rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition-duration: 1s;
+  transition-property: transform;
+}
+
+.remove_btn:hover,
+.add_btn:hover {
+  transform: scale(1.1);
+}
+
+#footer {
+  display: flex;
+  text-align: center;
+  margin: 2rem;
+}
+
+p {
+  display: inline-block;
+}
+
+ /* Responsive design */
+
+@media only screen and (max-width: 800px) {
+  .todo {
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .main {
+    width: 28rem;
+  }
+
+  .todo_list {
+    width: 90vw;
+  }
+}
